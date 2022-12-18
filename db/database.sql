@@ -1,18 +1,16 @@
-CREATE DATABASE IF NOT EXISTS companydb;
+CREATE DATABASE IF NOT EXISTS gastosDB;
 
-USE companydb;
+USE gastosDB;
 
-CREATE TABLE employee (
+CREATE TABLE gastos (
     id INT(11) NOT NULL AUTO_INCREMENT,
-    name VARCHAR(45) DEFAULT NULL,
-    salary INT(5) DEFAULT NULL,
+    descripcion VARCHAR(45) DEFAULT NULL,
+    gasto INT(10) DEFAULT NULL,
     PRIMARY KEY (id)
 );
 
-DESCRIBE employee;
+DESCRIBE gastos;
 
-INSERT INTO employee VALUES
-  (1, "Joe", 1000),
-  (2, "Henry", 2000),
-  (3, "Sam", 3000),
-  (4, "Max", 4000);
+INSERT INTO gastos VALUES
+  (1, "Comida", 1000),
+  (2, "Alimento perro", 2000);
